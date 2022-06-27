@@ -1,0 +1,65 @@
+body {
+    font-family: Roboto;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr 3fr 3fr auto;
+}
+
+.header {
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #1F2937;
+    color: #F9FAF8;
+}
+
+.header-logo {
+    grid-template-columns: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.header-links {
+    grid-template-columns: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.header-links ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2em;
+}
+
+.banner {
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    background: #1F2937;
+}
+
+.quote {
+    grid-template-columns: 1;
+    grid-template-rows: 3;    
+    background: #E5E7EB;
+}
+
+.call-to-action-container {
+    grid-template-columns: 1;
+    grid-template-rows: 4;    
+}
+
+.call-to-action {
+
+}
+
+.footer {
+    grid-template-columns: 1;
+    grid-template-rows: 5;
+    background: #1F2937;
+    text-align: center;
+    color: #F9FAF8;
+}
