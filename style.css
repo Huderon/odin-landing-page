@@ -1,65 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Roboto;
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 3fr 3fr 3fr auto;
+  font-family: Roboto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  background: #1f2937;
 }
 
 .header {
-    grid-template-columns: 1;
-    grid-template-rows: 1;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background: #1F2937;
-    color: #F9FAF8;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  color: #f9faf8;
+  width: 66%;
+  margin: auto;
 }
 
 .header-logo {
-    grid-template-columns: 1;
-    align-self: center;
-    justify-self: center;
+  grid-column: 1 / 2;
+  align-self: center;
+  justify-self: start;
 }
 
 .header-links {
-    grid-template-columns: 2;
-    align-self: center;
-    justify-self: center;
+  grid-column: 2 / -1;
+  align-self: center;
+  justify-self: end;
 }
 
 .header-links ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  list-style-type: none;
+  gap: 2em;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+}
+
+.banner-container {
+  background: #1f2937;
 }
 
 .banner {
-    grid-template-columns: 1;
-    grid-template-rows: 2;
-    background: #1F2937;
+  grid-row: 1 / 2;
+  width: 66%;
+  margin: 5em auto 5em auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.banner-text {
+  width: 1fr;
+  justify-self: start;
+}
+
+.banner-text > h1 {
+  font-size: 48px;
+  font-weight: bolder;
+  color: #f9faf8;
+}
+
+.banner-text > p {
+  font-size: 18px;
+  color: #f9faf8;
+  margin-bottom: 1em;
+}
+
+.banner-text > button {
+  background: #3882f6;
+  border: none;
+  padding: 8px 1em 8px 1em;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #f9faf8;
+}
+
+.banner-image-placeholder {
+  width: 500px;
+  background: #c5c7ca;
+  justify-self: end;
+  display: grid;
+}
+
+.banner-image-placeholder > p {
+  color: #f9faf8;
+  justify-self: center;
+  align-self: center;
+}
+
+.information-container {
+  grid-row: 2 / 3;
+}
+
+.information {
+  max-width: 66%;
+  width: 66%;
+  display: flex;
+  margin: 5em auto 5em auto;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 8em;
+}
+
+.card > .frame {
+  display: block;
+  box-sizing: border-box;
+  height: 8em;
+  width: 8em;
+  border-radius: 1em;
+  border: #3882f6 solid;
+  text-overflow: none;
+}
+.card > .subtext {
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.quote-container {
+  grid-row: 3 / 4;
+  background: #e5e7eb;
 }
 
 .quote {
-    grid-template-columns: 1;
-    grid-template-rows: 3;    
-    background: #E5E7EB;
+  width: 66%;
+  margin: 5em auto 5em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.quote-text {
+  font-size: 36px;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.quotee {
+  align-self: end;
+  justify-self: end;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .call-to-action-container {
-    grid-template-columns: 1;
-    grid-template-rows: 4;    
+  grid-row: 4 / -1;
 }
 
 .call-to-action {
+  background: #3882f6;
+  align-self: center;
+  width: 66%;
+  margin: 5em auto 5em auto;
+  border-radius: 8px;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 
+.call-to-action-text {
+  color: #f9faf8;
+  align-self: center;
+  justify-self: center;
+}
+
+.call-to-action-text > h6 {
+  font-size: 18px;
+}
+
+.call-to-action-text > p {
+  font-size: 16px;
+  font-style: normal;
+}
+
+.call-to-action-button {
+  border-radius: 8px;
+  border: none;
+  align-self: center;
+  justify-self: center;
+  padding: 8px;
+}
+
+.call-to-action-button > button {
+  color: #f9faf8;
+  background: none;
+  border-radius: 8px;
+  border: #f9faf8 solid;
+  padding: 8px;
 }
 
 .footer {
-    grid-template-columns: 1;
-    grid-template-rows: 5;
-    background: #1F2937;
-    text-align: center;
-    color: #F9FAF8;
+  background: #1f2937;
+  text-align: center;
+  color: #f9faf8;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
